@@ -1,0 +1,33 @@
+Overview
+Lanternfish Problem from Day 6 of AoC 2021
+The lanternfish problem was pretty much a coding problem from a yearly coding challenge Advent of Code. 
+The problem was to calculate the number of an exponentially increasing amount of fish as they bred each day. We provided two solutions, an algorithmic solution that generates the 
+lifespan of each individual fish and a value tracking model that simply tracks the amount of fish with each specific lifespan.
+The goal of this project was to apply Machine learning and Neural Networks to this question and to see if they could be used to solve this problem, and if not, how big the 
+error of each model was.
+
+data prep
+
+was pretty hard to prep the data due to the exponential growth of the fish meant that with the test set by day 2500 the number of fish had exceeded 80 digits long. 
+because of this we had to cut the predictions to only ~150 days or so otherwise the large exponential would just have every model predicting just under the largest value.
+scalers could be considered, but if we used the minmax scaler which scales all values inbetween 0 and 1, this would result in the starting values being reduced to practically 0, 
+this created predictions that only resulted in infinity.
+One way to avoid this would have been to feed the data in differently, rather than simply spamming the network with giant chunks of time sequenced data, it would have been better
+to sequence them in days, number of fish and sum and to use that as a training set. 
+
+We used an input to generate the data, and used the given data from the AoC question as the training set.
+
+Model Training
+We used linear regression, a naive bayes gaussian model and a LSTM neural network to calculate the difference, and sum of each day. It can be seen from the graphs that the Naive 
+Bays model which assumes that each value is independant on the previous one, that it performs the worst. This is obvious as each day's sum of lanternfish is wholly dependant on 
+the previous days. 
+
+Challenges:
+Scaling the data, as mentioned before the huge spread of data meant that any scaling would decrease the starting days to practically 0. This meant that only limited windows could 
+be taken before the network would simply ignore the starting values. 
+RAM
+using the algorithmic solution instead of the value tracking solution would simply take an exponential amount of time and ram. Approaching 200 days, each day would take approx 65 
+seconds to calculate with my machine's RAM filling up and rendering the whole notebook inoperable. 
+Additional ML:
+Using an untaught model was difficult, as was finding a model that would deliberately be ineffective. The Naive Bayes model was perfect, but presented some issues when the values 
+were simply too large to fit in. (80 sig figs)
