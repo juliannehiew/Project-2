@@ -38,7 +38,7 @@ In this example, after 18 days, there are a total of 26 fish. After 80 days, the
 
 *In order to predict the exponential birth rate of the lantern fish, we aim to use various machine learning models to evaluate the number of fishes within a given time frame* 
 
-**The python file is called project notebook.ipynb**
+**The python file is called Project Notebook.ipynb**
 
 
 
