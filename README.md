@@ -1,7 +1,7 @@
 # Puzzle description : Lanternfish growth prediction
 **With the algorithmic problem from AoC 2021 day 6**;
 
-
+https://adventofcode.com/2021/day/6
 
 A massive school of glowing lanternfish swims past. They must spawn quickly to reach such large numbers - maybe exponentially quickly? You should model their growth rate to be sure.   Although you know nothing about this specific species of lanternfish, you make some guesses about their attributes. Surely, each lanternfish creates a new lanternfish once every 7 days.
 
@@ -29,27 +29,7 @@ Each day, a 0 becomes a 6 and adds a new 8 to the end of the list, while each ot
 
 In this example, after 18 days, there are a total of 26 fish. After 80 days, there would be a total of 5934.
 
-**--Part One --**
 
-Find a way to simulate lanternfish. How many lanternfish would there be after 80 days?
-
-Your puzzle answer was 363101.
-
-
-**--- Part Two ---**
-
-Suppose the lanternfish live forever and have unlimited food and space. Would they take over the entire ocean?
-
-After 256 days in the example above, there would be a total of 26984457539 lanternfish!
-
-How many lanternfish would there be after 256 days?
-
-Your puzzle answer was 1644286074024.
-
-
-We have the input [1,3,3,4,5,1,1,1,1,1,1,2,1,4,1,1,1,5,2,2,4,3,1,1,2,5,4,2,2,3,1,2,3,2,1,1,4,4,2,4,4,1,2,4,3,3,3,1,1,3,4,5,2,5,1,2,5,1,1,1,3,2,3,3,1,4,1,1,4,1,4,1,1,1,1,5,4,2,1,2,2,5,5,1,1,1,1,2,1,1,1,1,3,2,3,1,4,3,1,1,3,1,1,1,1,3,3,4,5,1,1,5,4,4,4,4,2,5,1,1,2,5,1,3,4,4,1,4,1,5,5,2,4,5,1,1,3,1,3,1,4,1,3,1,2,2,1,5,1,5,1,3,1,3,1,4,1,4,5,1,4,5,1,1,5,2,2,4,5,1,3,2,4,2,1,1,1,2,1,2,1,3,4,4,2,2,4,2,1,4,1,3,1,3,5,3,1,1,2,2,1,5,2,1,1,1,1,1,5,4,3,5,3,3,1,5,5,4,4,2,1,1,1,2,5,3,3,2,1,1,1,5,5,3,1,4,4,2,4,2,1,1,1,5,1,2,4,1,3,4,4,2,1,4,2,1,3,4,3,3,2,3,1,5,3,1,1,5,1,2,2,4,4,1,2,3,1,2,1,1,2,1,1,1,2,3,5,5,1,2,3,1,3,5,4,2,1,3,3,4]
-
-From this we can create random lists of random lengths with random numbers in the range of 0 to 8. We can then use machine learning and Neural networks to compute the length of each random list after 150 days. We will then plot the differences between the algorithm and machine learning/neural networks.
 
 
 *****************************************************************************************************************************************************************************
@@ -57,6 +37,10 @@ From this we can create random lists of random lengths with random numbers in th
 # Project Goal
 
 *In order to predict the exponential birth rate of the lantern fish, we aim to use various machine learning models to evaluate the number of fishes within a given time frame* 
+
+**The python file is called project notebook.ipynb**
+
+
 
 ## Model Used
 
